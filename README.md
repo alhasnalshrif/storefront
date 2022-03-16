@@ -65,6 +65,39 @@ npm run lint
 npm run prettier
 ```
 
+## Create tables
+
+```
+
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    user_name VARCHAR(20),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    password VARCHAR(100)
+);
+
+CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100),
+    price integer
+);
+
+CREATE TABLE orders (
+    id SERIAL PRIMARY KEY,
+    user_id integer REFERENCES users(id),
+    order_status VARCHAR(20)
+);
+
+CREATE TABLE order_products (
+    id SERIAL PRIMARY KEY,
+    quantity integer,
+    order_id integer REFERENCES orders(id),
+    product_id integer REFERENCES products(id)
+);
+
+```
+
 ## Database Information
 
 For development and Testing

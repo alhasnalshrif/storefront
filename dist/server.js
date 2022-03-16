@@ -14,7 +14,7 @@ app.use(body_parser_1.default.json());
 app.use((0, helmet_1.default)());
 const port = 5000;
 const host = 'localhost';
-app.listen(port, host, () => console.log('Server ' + host + ' is listening on port ' + port));
+app.listen(port, host, () => console.log('Server ' + host + port));
 app.get('/', (req, res) => {
     res.status(200).send('Server success!');
 });
