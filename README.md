@@ -18,6 +18,7 @@ PG_DB=store_dev
 PG_USER=postgres
 PG_PASSWORD=postgres
 ENV=dev
+PG_DB_TEST=store_test
 BCRYPT_PASSWORD=AnyPassword
 SALT_ROUNDS=10
 TOKEN_SECRET=TheSecret
